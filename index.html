@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ammar Amjad Sandilkar - Computer Engineering Graduate, Frontend Developer, and Aspiring Full-Stack Developer. Portfolio showcasing skills, projects, and career aspirations.">
+  <meta name="keywords" content="Ammar Amjad Sandilkar, Portfolio, Computer Engineer, Full-Stack Developer, Frontend Developer, React, .NET, Java, Web Development">
+  <meta name="author" content="Ammar Amjad Sandilkar">
+  <title>Ammar Amjad Sandilkar | Portfolio</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Dynamic Futuristic Backgrounds -->
+  <canvas id="canvas-particles"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="radial-glow"></div>
+  <div class="radial-glow-2"></div>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-code"></i> AMMAR<span>.</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Home (Hero) Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        
+        <!-- Hero Details -->
+        <div class="hero-content reveal-left active">
+          <div class="hero-subtitle">Hello World, I'm</div>
+          <h1 class="hero-title">Ammar Amjad <br><span>Sandilkar</span></h1>
+          
+          <div class="hero-typewriter-container">
+            <span id="typewriter-text"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+          
+          <div class="hero-headline">Building Modern Web Experiences with Clean Code and Creative Design</div>
+          
+          <p class="hero-intro">
+            Computer Engineering graduate with a strong foundation in programming, web development, and software engineering principles. Passionate about building responsive web applications and continuously learning modern technologies such as React.js, Node.js, and .NET. Seeking opportunities to contribute technical expertise while growing professionally in the IT industry.
+          </p>
+          
+          <div class="hero-cta">
+            <!-- Simulated Google Drive Resume Link -->
+            <a href="https://drive.google.com/drive/my-drive" target="_blank" class="btn btn-primary">
+              <i class="fa-solid fa-cloud-arrow-down btn-icon"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope btn-icon"></i> Contact Me
+            </a>
+          </div>
+          
+          <div class="hero-socials">
+            <span>Find Me:</span>
+            <a href="https://www.linkedin.com/in/ammar-sandilkar-7b9a53372" target="_blank" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/AMMAR-SANDILKAR" target="_blank" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Hero Profile Picture -->
+        <div class="hero-image-wrapper reveal-right active">
+          <div class="profile-hex-frame">
+            <div class="profile-image-container">
+              <img src="assets/profile_picture.png" alt="Ammar Amjad Sandilkar Portrait" class="profile-img">
+            </div>
+          </div>
+          
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-react glass-panel">
+            <i class="fa-brands fa-react fa-spin" style="animation-duration: 10s;"></i>
+            <span>React.js</span>
+          </div>
+          <div class="floating-badge badge-dotnet glass-panel">
+            <i class="fa-solid fa-cubes"></i>
+            <span>.NET Dev</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="section-title-container reveal">
+        <span class="section-subtitle">Get To Know Me</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-title-under"></div>
+      </div>
+      
+      <div class="about-grid">
+        
+        <!-- Left Side: Story & Highlights -->
+        <div class="about-info reveal-left">
+          <h3>My Professional Journey</h3>
+          <div class="about-text">
+            <p>
+              I recently completed my Bachelor of Engineering in Computer Engineering. During my academic journey, I developed a strong understanding of core computer science concepts including Programming in C, Java, Database Management Systems, and Data Structures.
+            </p>
+            <p>
+              I have worked on academic projects where I applied these concepts to solve real-world problems. I am a quick learner, passionate about software development, and eager to work on innovative projects that create meaningful impact.
+            </p>
+          </div>
+          
+          <div class="key-highlights-container">
+            <h4>Key Strengths</h4>
+            <div class="highlights-grid">
+              <div class="highlight-item glass-panel">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Computer Engineering Fundamentals</span>
+              </div>
+              <div class="highlight-item glass-panel">
+                <i class="fa-solid fa-code"></i>
+                <span>Passion for Web Dev</span>
+              </div>
+              <div class="highlight-item glass-panel">
+                <i class="fa-solid fa-brain"></i>
+                <span>Problem Solver</span>
+              </div>
+              <div class="highlight-item glass-panel">
+                <i class="fa-solid fa-users"></i>
+                <span>Team Player</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Education Card -->
+        <div class="education-card glass-panel reveal-right">
+          <div class="education-title">
+            <div>
+              <span class="degree">Bachelor of Engineering</span>
+              <div style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">Computer Engineering</div>
+            </div>
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          
+          <div class="edu-detail">
+            <div class="edu-row">
+              <i class="fa-solid fa-building-columns"></i>
+              <div>
+                <div class="edu-label">Institution</div>
+                <div class="edu-val">A. P. Shah Institute of Technology, Thane</div>
+              </div>
+            </div>
+            
+            <div class="edu-row">
+              <i class="fa-solid fa-scroll"></i>
+              <div>
+                <div class="edu-label">University Affiliation</div>
+                <div class="edu-val">University of Mumbai</div>
+              </div>
+            </div>
+            
+            <div class="edu-row">
+              <i class="fa-regular fa-calendar-check"></i>
+              <div>
+                <div class="edu-label">Graduation Year</div>
+                <span class="grad-year">Class of 2026</span>
+              </div>
+            </div>
+            
+            <div class="edu-row" style="border-top: 1px dashed var(--glass-border); padding-top: 1rem; margin-top: 0.5rem;">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <div class="edu-label">Key Highlights</div>
+                <div class="edu-val" style="font-size: 0.9rem; font-weight: 400; line-height: 1.5; margin-top: 0.25rem;">
+                  Advanced coursework in Algorithms, DBMS, Operating Systems, Software Engineering, and Object-Oriented Programming. Eager to bridge theoretical foundations with industry applications.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-title-container reveal">
+        <span class="section-subtitle">Technical Expertise</span>
+        <h2 class="section-title">My Skills</h2>
+        <div class="section-title-under"></div>
+      </div>
+      
+      <div class="skills-grid stagger-parent">
+        
+        <!-- Frontend Card -->
+        <div class="skills-category glass-panel reveal" style="--stagger-index: 1;">
+          <h3><i class="fa-solid fa-window-restore"></i> Frontend Development</h3>
+          <div class="skills-list">
+            <div class="skill-badge"><i class="fa-brands fa-html5" style="color: #e34c26;"></i> HTML5</div>
+            <div class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i> CSS3</div>
+            <div class="skill-badge"><i class="fa-brands fa-js" style="color: #f0db4f;"></i> JavaScript</div>
+            <div class="skill-badge"><i class="fa-brands fa-react" style="color: #61dbfb;"></i> React.js</div>
+          </div>
+        </div>
+        
+        <!-- Backend Card -->
+        <div class="skills-category glass-panel reveal" style="--stagger-index: 2;">
+          <h3><i class="fa-solid fa-server"></i> Backend Development</h3>
+          <div class="skills-list">
+            <div class="skill-badge"><i class="fa-brands fa-node-js" style="color: #3c873a;"></i> Node.js</div>
+            <div class="skill-badge"><i class="fa-solid fa-gear"></i> .NET</div>
+          </div>
+        </div>
+        
+        <!-- Languages Card -->
+        <div class="skills-category glass-panel reveal" style="--stagger-index: 3;">
+          <h3><i class="fa-solid fa-terminal"></i> Programming</h3>
+          <div class="skills-list">
+            <div class="skill-badge"><i class="fa-brands fa-java" style="color: #f89820;"></i> Java</div>
+            <div class="skill-badge"><i class="fa-solid fa-code"></i> C Language</div>
+          </div>
+        </div>
+        
+        <!-- Database Card -->
+        <div class="skills-category glass-panel reveal" style="--stagger-index: 4;">
+          <h3><i class="fa-solid fa-database"></i> Database & Core</h3>
+          <div class="skills-list">
+            <div class="skill-badge"><i class="fa-solid fa-cubes-stacked"></i> DBMS</div>
+            <div class="skill-badge"><i class="fa-solid fa-sitemap"></i> Data Structures</div>
+          </div>
+        </div>
+        
+        <!-- Tools Card -->
+        <div class="skills-category glass-panel reveal" style="--stagger-index: 5;">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Tech</h3>
+          <div class="skills-list">
+            <div class="skill-badge"><i class="fa-brands fa-git-alt" style="color: #f1502f;"></i> Git</div>
+            <div class="skill-badge"><i class="fa-brands fa-github"></i> GitHub</div>
+          </div>
+        </div>
+        
+        <!-- Soft Skills Card -->
+        <div class="skills-category glass-panel reveal" style="--stagger-index: 6;">
+          <h3><i class="fa-regular fa-lightbulb"></i> Soft Skills</h3>
+          <div class="skills-list">
+            <div class="skill-badge"><i class="fa-solid fa-check"></i> Problem Solving</div>
+            <div class="skill-badge"><i class="fa-solid fa-check"></i> Communication</div>
+            <div class="skill-badge"><i class="fa-solid fa-check"></i> Teamwork</div>
+            <div class="skill-badge"><i class="fa-solid fa-check"></i> Quick Learning</div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services">
+      <div class="section-title-container reveal">
+        <span class="section-subtitle">What I Offer</span>
+        <h2 class="section-title">My Services</h2>
+        <div class="section-title-under"></div>
+      </div>
+      
+      <div class="services-grid stagger-parent">
+        
+        <!-- Service 1 -->
+        <div class="service-card glass-panel reveal" style="--stagger-index: 1;">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-window-maximize"></i>
+          </div>
+          <h3>Frontend Web Development</h3>
+          <p>Creating responsive and interactive user interfaces using modern web technologies like React.js, clean CSS grids, and modular JavaScript to bring layouts to life.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card glass-panel reveal" style="--stagger-index: 2;">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3>Responsive Website Design</h3>
+          <p>Building mobile-first layouts that fluidly scale across desktop, tablet, and mobile views, guaranteeing an optimal interface on any display size.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card glass-panel reveal" style="--stagger-index: 3;">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Designing intuitive and visually striking user flows, optimizing visual hierarchy, and creating seamless interactions focused on usability and conversion.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card glass-panel reveal" style="--stagger-index: 4;">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3>Web App Development</h3>
+          <p>Building secure, scalable, and modular web applications with structured database logic (DBMS) and solid software architectural patterns.</p>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="service-card glass-panel reveal" style="--stagger-index: 5;">
+          <div class="service-icon-box">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3>.NET Development</h3>
+          <p>Building secure, fast, and structured API backend logic, console applications, and MVC structures using Microsoft's .NET software framework.</p>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Portfolio / Projects Section -->
+    <section id="portfolio">
+      <div class="section-title-container reveal">
+        <span class="section-subtitle">Showcase of My Work</span>
+        <h2 class="section-title">My Projects</h2>
+        <div class="section-title-under"></div>
+      </div>
+      
+      <div class="portfolio-grid">
+        
+        <!-- Project 1 Card -->
+        <div class="project-card glass-panel reveal-left">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder-bg">
+              <i class="fa-solid fa-prescription-bottle-medical"></i>
+            </div>
+          </div>
+          
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tech-badge">Java</span>
+              <span class="tech-badge">Android Studio</span>
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Railway API</span>
+              <span class="tech-badge">Razorpay API</span>
+            </div>
+            
+            <h3>Pharmaceutical Ordering Android System</h3>
+            <p>
+              Developed a native Android application allowing users to search, browse, catalog, and order pharmaceutical medicines online. Built with a clean interface and robust backend services.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fa-solid fa-chevron-right"></i> Medicine browsing and filtering catalog</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Secure checkout integration via Razorpay API</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Firebase database & user auth integration</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Product catalog & real-time order tracking</li>
+            </ul>
+            
+            <div class="project-links">
+              <!-- Links from user prompt contact info -->
+              <a href="https://github.com/AMMAR-SANDILKAR/repomedicine" target="_blank" class="project-link">
+                <i class="fa-brands fa-github"></i> Repository <i class="fa-solid fa-arrow-right-long" style="font-size: 0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 Card -->
+        <div class="project-card glass-panel reveal-right">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder-bg">
+              <i class="fa-solid fa-vr-cardboard"></i>
+            </div>
+          </div>
+          
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tech-badge">Augmented Reality</span>
+              <span class="tech-badge">Computer Vision</span>
+              <span class="tech-badge">3D Modeling</span>
+              <span class="tech-badge">Machine Learning</span>
+            </div>
+            
+            <h3>AR Virtual Try-On for Apparel & Footwear</h3>
+            <p>
+              Built an advanced Augmented Reality application that enables users to virtually try clothing and footwear in real time, shifting traditional retail to a futuristic virtual shopping space.
+            </p>
+            
+            <ul class="project-features">
+              <li><i class="fa-solid fa-chevron-right"></i> Real-time body & foot detection tracking</li>
+              <li><i class="fa-solid fa-chevron-right"></i> High-fidelity 3D apparel model visualization</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Machine Learning adjustments for visual fitting</li>
+              <li><i class="fa-solid fa-chevron-right"></i> Interactive and engaging retail user experience</li>
+            </ul>
+            
+            <div class="project-links">
+              <a href="https://github.com/AMMAR-SANDILKAR/repo-threatdetection" target="_blank" class="project-link">
+                <i class="fa-brands fa-github"></i> Repository <i class="fa-solid fa-arrow-right-long" style="font-size: 0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Career Goals Section -->
+    <section id="vision">
+      <div class="section-title-container reveal">
+        <span class="section-subtitle">Future Aspirations</span>
+        <h2 class="section-title">My Vision</h2>
+        <div class="section-title-under"></div>
+      </div>
+      
+      <div class="vision-panel glass-panel reveal-scale">
+        <div class="vision-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <p>
+          "Seeking an entry-level opportunity in a growth-oriented organization where I can apply my technical knowledge, contribute to organizational success, and continuously learn emerging technologies. My goal is to become a skilled software developer capable of building impactful digital solutions."
+        </p>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-title-container reveal">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="section-title-under"></div>
+      </div>
+      
+      <div class="contact-grid">
+        
+        <!-- Contact Information Cards -->
+        <div class="contact-info-column reveal-left">
+          
+          <!-- Email Card -->
+          <div class="contact-info-card glass-panel">
+            <div class="contact-info-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Email Address</h4>
+              <a href="mailto:ammar.sandilkar@gmail.com">ammar.sandilkar@gmail.com</a>
+            </div>
+          </div>
+          
+          <!-- Phone Card -->
+          <div class="contact-info-card glass-panel">
+            <div class="contact-info-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Phone Number</h4>
+              <a href="tel:+919833092072">+91 98330 92072</a>
+            </div>
+          </div>
+          
+          <!-- Location Card -->
+          <div class="contact-info-card glass-panel">
+            <div class="contact-info-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Location</h4>
+              <p>Mumbra-Thane, Maharashtra, India</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Contact Form Card -->
+        <div class="contact-form-panel glass-panel reveal-right">
+          <form id="portfolio-contact-form" novalidate>
+            
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Your Name" required>
+              <div class="error-message" id="error-name">Please enter your name (minimum 2 characters).</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-input" placeholder="name@example.com" required>
+              <div class="error-message" id="error-email">Please enter a valid email address.</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="Inquiry Topic" required>
+              <div class="error-message" id="error-subject">Please enter a subject (minimum 4 characters).</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message</label>
+              <textarea id="form-message" class="form-input" placeholder="Type your message here..." required></textarea>
+              <div class="error-message" id="error-message-text">Please enter a message (minimum 10 characters).</div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane btn-icon"></i> Send Message
+            </button>
+            
+          </form>
+        </div>
+        
+      </div>
+    </section>
+  </div> <!-- End Content Wrapper -->
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container"></div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">AMMAR<span>.</span></a>
+          <span class="footer-tagline">Computer Engineering Graduate & Developer</span>
+        </div>
+        
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/ammar-sandilkar-7b9a53372" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/AMMAR-SANDILKAR" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Ammar Amjad Sandilkar. All rights reserved.</p>
+        <p class="copyright" style="font-size: 0.8rem; opacity: 0.6;">Designed with Glassmorphism & Neumorphic aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- JS Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
