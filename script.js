@@ -3,17 +3,17 @@
    Interactive Canvas, Animations, and Validations
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   // ==========================================
   // 1. Dynamic Canvas Particles Background
   // ==========================================
   const canvas = document.getElementById('canvas-particles');
   const ctx = canvas.getContext('2d');
-  
+
   let particlesArray = [];
   const particleCount = 70;
   const connectionDistance = 110;
-  
+
   // Mouse coordinates tracking
   let mouse = {
     x: null,
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
   }
   window.addEventListener('resize', resizeCanvas);
-  
+
   // Initialize canvas size
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.size = size;
       this.color = color;
     }
-    
+
     // Draw individual particle
     draw() {
       ctx.beginPath();
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.fillStyle = this.color;
       ctx.fill();
     }
-    
+
     // Update particle position & handle collisions
     update() {
       // Check boundaries
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (this.y > canvas.height || this.y < 0) {
         this.directionY = -this.directionY;
       }
-      
+
       // Mouse interaction (repelling force)
       if (mouse.x !== null && mouse.y !== null) {
         let dx = this.x - mouse.x;
@@ -81,16 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
           let force = (mouse.radius - distance) / mouse.radius;
           let directionX = forceDirectionX * force * 3;
           let directionY = forceDirectionY * force * 3;
-          
+
           this.x += directionX;
           this.y += directionY;
         }
       }
-      
+
       // Move particle
       this.x += this.directionX;
       this.y += this.directionY;
-      
+
       this.draw();
     }
   }
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function initParticles() {
     particlesArray = [];
     let count = Math.min(particleCount, (canvas.width * canvas.height) / 18000); // Scale with screen size
-    
+
     for (let i = 0; i < count; i++) {
       let size = (Math.random() * 2) + 1; // size between 1 and 3px
       let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let directionX = (Math.random() * 0.4) - 0.2; // slow motion
       let directionY = (Math.random() * 0.4) - 0.2;
       let color = 'rgba(96, 165, 250, 0.4)'; // faint accent blue
-      
+
       particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
   }
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let dx = particlesArray[a].x - particlesArray[b].x;
         let dy = particlesArray[a].y - particlesArray[b].y;
         let distance = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (distance < connectionDistance) {
           opacityValue = 1 - (distance / connectionDistance);
           ctx.strokeStyle = `rgba(59, 130, 246, ${opacityValue * 0.15})`; // electric blue connection
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.stroke();
         }
       }
-      
+
       // Draw connection to mouse cursor
       if (mouse.x !== null && mouse.y !== null) {
         let dx = particlesArray[a].x - mouse.x;
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let typingSpeed = 100;
   function typeEffect() {
     const currentRole = roles[roleIndex];
-    
+
     if (isDeleting) {
       // Remove character
       typewriterText.textContent = currentRole.substring(0, charIndex - 1);
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Scroll Reveal Animations (IntersectionObserver)
   // ==========================================
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-  
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Header Scroll State (Sticky color shift)
   // ==========================================
   const header = document.querySelector('header');
-  
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
@@ -286,20 +286,20 @@ document.addEventListener('DOMContentLoaded', () => {
   function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
-    
+
     const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
     toast.innerHTML = `
       <i class="fa-solid ${icon}"></i>
       <span>${message}</span>
     `;
-    
+
     toastContainer.appendChild(toast);
-    
+
     // Trigger transition entry
     setTimeout(() => {
       toast.classList.add('show');
     }, 100);
-    
+
     // Exit & Destroy after 4 seconds
     setTimeout(() => {
       toast.classList.remove('show');
@@ -312,17 +312,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // 8. Contact Form Client-Side Validation
   // ==========================================
   const form = document.getElementById('portfolio-contact-form');
-  
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const nameInput = document.getElementById('form-name');
     const emailInput = document.getElementById('form-email');
     const subjectInput = document.getElementById('form-subject');
     const messageInput = document.getElementById('form-message');
-    
+
     let isValid = true;
-    
+
     // Clear previous errors
     const inputs = [nameInput, emailInput, subjectInput, messageInput];
     inputs.forEach(input => {
@@ -332,41 +332,41 @@ document.addEventListener('DOMContentLoaded', () => {
         errDiv.style.display = 'none';
       }
     });
-    
+
     // 1. Validate Name
     if (nameInput.value.trim().length < 2) {
       showError(nameInput, 'error-name');
       isValid = false;
     }
-    
+
     // 2. Validate Email
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(emailInput.value.trim())) {
       showError(emailInput, 'error-email');
       isValid = false;
     }
-    
+
     // 3. Validate Subject
     if (subjectInput.value.trim().length < 4) {
       showError(subjectInput, 'error-subject');
       isValid = false;
     }
-    
+
     // 4. Validate Message
     if (messageInput.value.trim().length < 10) {
       showError(messageInput, 'error-message-text');
       isValid = false;
     }
-    
+
     if (isValid) {
       // Disable form buttons & inputs to show submitting state
       const submitBtn = form.querySelector('button[type="submit"]');
       const origBtnContent = submitBtn.innerHTML;
-      
+
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin btn-icon"></i> Sending...';
       inputs.forEach(inp => inp.disabled = true);
-      
+
       // Simulate API submit delay (1.5 seconds)
       setTimeout(() => {
         // Re-enable form
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
           inp.disabled = false;
           inp.value = ''; // Reset values
         });
-        
+
         showToast('Thank you! Your message has been sent successfully.', 'success');
       }, 1500);
     } else {
